@@ -66,17 +66,6 @@ The project is split into two tiers of questions:
 14. List the months in the last three years where sales exceeded 5,000 units in the USA.
 15. Identify the product category with the most warranty claims filed in the last two years.
 
-## Project Focus
-
-This project primarily focuses on developing and showcasing the following SQL skills:
-
-- **Complex Joins and Aggregations**: Demonstrating the ability to perform complex SQL joins and aggregate data meaningfully.
-- **Window Functions**: Using advanced window functions for running totals, growth analysis, and time-based queries.
-- **Data Segmentation**: Analyzing data across different time frames to gain insights into product performance.
-- **Correlation Analysis**: Applying SQL functions to determine relationships between variables, such as product price and warranty claims.
-- **Real-World Problem Solving**: Answering business-related questions that reflect real-world scenarios faced by data analysts.
-
-
 ## Dataset
 
 - **Size**: 1 million+ rows of sales data.
