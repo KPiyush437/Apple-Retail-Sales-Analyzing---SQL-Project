@@ -1,109 +1,85 @@
-# ![Apple Logo](https://github.com/najirh/Apple-Retail-Sales-SQL-Project---Analyzing-Millions-of-Sales-Rows/blob/main/Apple_Changsha_RetailTeamMembers_09012021_big.jpg.slideshow-xlarge_2x.jpg) Apple Retail Sales SQL Project - Analyzing Millions of Sales Rows
-
-Project Overview
+## Project Overview
 
 This project demonstrates the use of SQL for fundamental and advanced business analysis by exploring over 1 million rows of Apple retail sales and warranty data. The dataset contains information about stores, products, sales transactions, and warranty claims across Apple retail locations worldwide.
 
-Entity Relationship Diagram (ERD)
+## Entity Relationship Diagram (ERD)
 
-Database Schema
+![ERD](https://github.com/najirh/Apple-Retail-Sales-SQL-Project---Analyzing-Millions-of-Sales-Rows/blob/main/erd.png)
 
-This project uses five main tables:
 
-stores – Apple retail store information
+## Database Schema
 
-store_id: Unique store identifier
+The project uses five main tables:
 
-store_name: Name of the store
+1. **stores**: Contains information about Apple retail stores.
+   - `store_id`: Unique identifier for each store.
+   - `store_name`: Name of the store.
+   - `city`: City where the store is located.
+   - `country`: Country of the store.
 
-city, country: Store location
+2. **category**: Holds product category information.
+   - `category_id`: Unique identifier for each product category.
+   - `category_name`: Name of the category.
 
-category – Product category details
+3. **products**: Details about Apple products.
+   - `product_id`: Unique identifier for each product.
+   - `product_name`: Name of the product.
+   - `category_id`: References the category table.
+   - `launch_date`: Date when the product was launched.
+   - `price`: Price of the product.
 
-category_id: Unique category identifier
+4. **sales**: Stores sales transactions.
+   - `sale_id`: Unique identifier for each sale.
+   - `sale_date`: Date of the sale.
+   - `store_id`: References the store table.
+   - `product_id`: References the product table.
+   - `quantity`: Number of units sold.
 
-category_name: Name of the category
+5. **warranty**: Contains information about warranty claims.
+   - `claim_id`: Unique identifier for each warranty claim.
+   - `claim_date`: Date the claim was made.
+   - `sale_id`: References the sales table.
+   - `repair_status`: Status of the warranty claim (e.g., Paid Repaired, Warranty Void).
 
-products – Apple product details
+## Objectives
 
-product_id, product_name
+The project is split into two tiers of questions:
 
-category_id references category table
+### Easy to Medium (10 Questions)
 
-launch_date, price
+1. Find the number of stores in each country.
+2. Calculate the total number of units sold by each store.
+3. Identify how many sales occurred in December 2023.
+4. Determine how many stores have never had a warranty claim filed.
+5. Calculate the percentage of warranty claims marked as "Warranty Void".
+6. Identify which store had the highest total units sold in the last year.
+7. Count the number of unique products sold in the last year.
+8. Find the average price of products in each category.
+9. How many warranty claims were filed in 2020?
+10. For each store, identify the best-selling day based on highest quantity sold.
 
-sales – Records of sales transactions
+### Medium to Hard (5 Questions)
 
-sale_id, sale_date
+11. Identify the least selling product in each country for each year based on total units sold.
+12. Calculate how many warranty claims were filed within 180 days of a product sale.
+13. Determine how many warranty claims were filed for products launched in the last two years.
+14. List the months in the last three years where sales exceeded 5,000 units in the USA.
+15. Identify the product category with the most warranty claims filed in the last two years.
 
-store_id, product_id references respective tables
+## Project Focus
 
-quantity
+This project primarily focuses on developing and showcasing the following SQL skills:
 
-warranty – Warranty claim data
+- **Complex Joins and Aggregations**: Demonstrating the ability to perform complex SQL joins and aggregate data meaningfully.
+- **Window Functions**: Using advanced window functions for running totals, growth analysis, and time-based queries.
+- **Data Segmentation**: Analyzing data across different time frames to gain insights into product performance.
+- **Correlation Analysis**: Applying SQL functions to determine relationships between variables, such as product price and warranty claims.
+- **Real-World Problem Solving**: Answering business-related questions that reflect real-world scenarios faced by data analysts.
 
-claim_id, claim_date
 
-sale_id references sales table
+## Dataset
 
-repair_status (e.g., Paid Repaired, Warranty Void)
-
-Objectives & SQL Exercises
-
-The project is structured into three tiers to develop SQL skills progressively:
-
-Easy to Medium (10 Questions)
-
-Count stores per country
-
-Total units sold per store
-
-Identify December 2023 sales
-
-Stores without warranty claims
-
-Percentage of "Warranty Void" claims
-
-Highest-selling store last year
-
-Unique products sold last year
-
-Average price per product category
-
-Warranty claims in 2020
-
-Best-selling day for each store
-
-Medium to Hard (5 Questions)
-
-Least-selling product by country and year
-
-Warranty claims within 180 days of sale
-
-Claims for recently launched products
-
-Months with >5,000 units sold in the USA
-
-Product category with most warranty claims
-
-Project Focus
-
-Complex Joins & Aggregations: Extracting meaningful insights from multiple tables
-
-Window Functions: Running totals, growth ratios, time-based analysis
-
-Data Segmentation: Performance insights by time period and product lifecycle
-
-Real-World Problem Solving: Practical business questions for analysts
-
-Dataset Details
-
-Size: 1M+ rows
-
-Time Span: Multi-year data for trend analysis
-
-Geography: Apple stores across multiple countries
-
-Conclusion
-
-This project allows me to develop fundamental and advanced SQL skills, handle large datasets, and produce business-relevant insights. 
+- **Size**: 1 million+ rows of sales data.
+- **Period Covered**: The data spans multiple years, allowing for long-term trend analysis.
+- **Geographical Coverage**: Sales data from Apple stores across various countries.
+--
