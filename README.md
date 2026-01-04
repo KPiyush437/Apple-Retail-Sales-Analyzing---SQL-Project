@@ -1,53 +1,107 @@
-# Apple-Retail-Sales-Analyzing---SQL-Project
-
-Objective
-
-Perform SQL-based analyses on Apple store sales and warranty datasets to extract actionable business insights. The goal is to demonstrate how fundamental and advanced SQL skills can be applied to evaluate store performance, product trends, warranty behavior, and long-term growth patterns across multiple countries. This project highlights practical decision-making skills that are crucial for business analysts.
-
 Project Overview
 
-This project uses over 1 million rows of Apple retail sales and warranty data collected from multiple stores worldwide. The dataset includes information on products, stores, sales transactions, and warranty claims. By solving a series of structured SQL problems, the project demonstrates how to analyze large-scale datasets, perform data segmentation, and answer real-world business questions using SQL fundamentals and advanced techniques.
+This project demonstrates the use of SQL for fundamental and advanced business analysis by exploring over 1 million rows of Apple retail sales and warranty data. The dataset contains information about stores, products, sales transactions, and warranty claims across Apple retail locations worldwide.
 
-The project is divided into three tiers of questions based on complexity:
-
-Easy to Medium: Basic aggregations and counts, identifying top/bottom performers, sales summaries, and warranty statistics.
-
-Medium to Hard: Time-based analysis, warranty timelines, country-level product performance, and identifying seasonal trends.
-
-Complex: Correlation analysis, running totals using window functions, growth ratios, and advanced performance evaluation across multiple years.
+Entity Relationship Diagram (ERD)
 
 Database Schema
 
-The project uses five main tables:
+This project uses five main tables:
 
-stores: Store details including location, country, and store ID.
+stores – Apple retail store information
 
-category: Product categories with unique identifiers.
+store_id: Unique store identifier
 
-products: Product details including launch date, price, and category.
+store_name: Name of the store
 
-sales: Transaction data linking stores and products with quantities sold.
+city, country: Store location
 
-warranty: Warranty claims with repair status and claim dates.
+category – Product category details
 
-Skills Developed
+category_id: Unique category identifier
 
-SQL Fundamentals & Advanced Queries: Complex joins, aggregations, filtering, and window functions.
+category_name: Name of the category
 
-Data Analysis: Identifying trends, segmenting data by time and geography, correlation analysis.
+products – Apple product details
 
-Business Insights: Store performance evaluation, product trend analysis, warranty risk assessment.
+product_id, product_name
 
-Portfolio & Interview Ready: Demonstrates ability to translate SQL results into actionable business recommendations.
+category_id references category table
+
+launch_date, price
+
+sales – Records of sales transactions
+
+sale_id, sale_date
+
+store_id, product_id references respective tables
+
+quantity
+
+warranty – Warranty claim data
+
+claim_id, claim_date
+
+sale_id references sales table
+
+repair_status (e.g., Paid Repaired, Warranty Void)
+
+Objectives & SQL Exercises
+
+The project is structured into three tiers to develop SQL skills progressively:
+
+Easy to Medium (10 Questions)
+
+Count stores per country
+
+Total units sold per store
+
+Identify December 2023 sales
+
+Stores without warranty claims
+
+Percentage of "Warranty Void" claims
+
+Highest-selling store last year
+
+Unique products sold last year
+
+Average price per product category
+
+Warranty claims in 2020
+
+Best-selling day for each store
+
+Medium to Hard (5 Questions)
+
+Least-selling product by country and year
+
+Warranty claims within 180 days of sale
+
+Claims for recently launched products
+
+Months with >5,000 units sold in the USA
+
+Product category with most warranty claims
+
+Project Focus
+
+Complex Joins & Aggregations: Extracting meaningful insights from multiple tables
+
+Window Functions: Running totals, growth ratios, time-based analysis
+
+Data Segmentation: Performance insights by time period and product lifecycle
+
+Real-World Problem Solving: Practical business questions for analysts
 
 Dataset Details
 
 Size: 1M+ rows
 
-Period Covered: Multiple years for trend analysis
+Time Span: Multi-year data for trend analysis
 
-Geographical Coverage: Apple stores across several countries
+Geography: Apple stores across multiple countries
 
 Conclusion
 
-By completing this project, you will gain hands-on experience in applying SQL for both fundamental and complex data analyses, preparing you for business analyst roles. It also demonstrates how data-driven insights can guide decisions related to sales, product management, and warranty optimization.
+This project allows me to develop fundamental and advanced SQL skills, handle large datasets, and produce business-relevant insights. 
