@@ -1,3 +1,5 @@
+# ![Apple Logo](https://github.com/najirh/Apple-Retail-Sales-SQL-Project---Analyzing-Millions-of-Sales-Rows/blob/main/Apple_Changsha_RetailTeamMembers_09012021_big.jpg.slideshow-xlarge_2x.jpg) Apple Retail Sales SQL Project - Analyzing Millions of Sales Rows
+
 Project Overview
 
 This project demonstrates the use of SQL for fundamental and advanced business analysis by exploring over 1 million rows of Apple retail sales and warranty data. The dataset contains information about stores, products, sales transactions, and warranty claims across Apple retail locations worldwide.
